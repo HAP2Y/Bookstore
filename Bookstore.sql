@@ -23,6 +23,29 @@ CREATE TABLE Book (
 PRIMARY KEY(bid)
 );
 
+CREATE TABLE po_items (
+id VARCHAR(20) NOT NULL,
+bid VARCHAR(20) NOT NULL,
+qty INT NOT NULL,
+price INT UNSIGNED NOT NULL,
+total INT NOT NULL,
+PRIMARY KEY(id,bid),
+INDEX (id),
+FOREIGN KEY(id) REFERENCES purchase_order(poid) ON DELETE CASCADE,
+INDEX (bid),
+FOREIGN KEY(bid) REFERENCES Book(bid) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS purchase_order;
+CREATE TABLE testing.purchase_order (
+`poid` VARCHAR(20) PRIMARY KEY,
+`firstname` char(20) NOT NULL,
+`lastname` char(20) NOT NULL,
+`status` ENUM('ORDERED','PROCESSED','DENIED') NOT NULL,
+`address` INT UNSIGNED NOT NULL,
+`grandtotal` VARCHAR(20) NOT NULL
+);
+
 insert into bookstore.book(bid, title, price, category, description) values
 ('b001', 'Little Prince', '20', 'Fiction','The Little Prince is a novella by French aristocrat, writer, and aviator Antoine de Saint-Exupéry. It was first published in English and French in the US by Reynal & Hitchcock in April 1943, and posthumously in France following the liberation of France as Saint-Exupérys works had been banned by the Vichy Regime.'),
 ('b002', 'Physics', '201', 'Science', 'Physics is the natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.'),
