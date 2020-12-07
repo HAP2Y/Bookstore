@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.BannerPicture {	
+	background-image:url(../Images/Banner.jpg);
+	height: 500px;
+	width: 100%;
+	background-size: cover;	
+	border-radius: 100px;
+}
+
+h1 {
+	text-align: center;
+	color: red;
+}
+
+a {	
+	color: white;
+	text-decoration:none;
+}
+
+a:hover {
+	
+  color: red;
+}
+
+.menu {
+	text-align: left;
+	padding-right: 30px;
+	background: #013;
+	font-family: "Lucida Console", Courier, monospace;
+	color: white;
+	
+}
+
+
+.menu ul {
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+	
+}
+.menu ul li{
+	width: 150px;
+	margin: 15px;
+	padding: 5px;
+	
+}
+
+.button {
+	
+	text-decoration:none;
+	background: #fff;
+	padding: 10px 15px;
+	color: #34495e;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 18px;
+/* 	border-radius: 5px; */
+/* 	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75); */
+	margin-top: 25px;
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+button:hover {
+	
+  color: red;
+}
+
+.login-popup {
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	algin-items: center;
+	padding-bottom: 100px;
+	
+}
+
+.login-popup-content {
+	
+	height: 250px;
+	width: 500px;
+	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: auto;
+  	margin-bottom: auto;
+	background: #d1eaff;
+	padding: 20px;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);	
+}
+
+input, .login {
+	margin: 20px auto;
+	display: block;
+	width: 50%;
+	padding: 15px auto;
+}
+
+.user {
+	border-radius: 40px;
+	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);		
+}
+
+.close {
+	position: absolute;
+	top: -15px;
+	right: -27px;	
+		
+}
+
+.Topic {
+	background-color: #013;
+	width: 250px;
+	padding: 15px;
+	margin-left: 0px;
+	margin-top: 0px;
+	text-align: center;
+  	font-family: "Lucida Console", Courier, monospace;
+	color: white;
+}
+
+

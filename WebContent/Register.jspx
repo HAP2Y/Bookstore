@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsp/jstl/fmt" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" session="true" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/Style.css" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/Javascript/Login.js">;</script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/mdb.min.css" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/Javascript/jquery.min.js">;</script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/Javascript/bootstrap.min.js">;</script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/Javascript/mdb.min.js">;</script>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+		<a class="navbar-brand" href="MainPage.jspx">BookStore</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarsExample06" aria-controls="navbarsExample06"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExample06">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="#">About<span
+						class="sr-only">(current)</span></a></li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link"
+					href="${pageContext.request.contextPath}/Bookcat.jsp">Books</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="${pageContext.request.contextPath}/AddToCart.jsp">Cart</a></li>
+				<c:choose>
+					<c:when test="${loggedIn}">
+						<li class="nav-item"><a class="nav-link"
+							href="${pageContext.request.contextPath}/logout.jsp">Logout</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item"><a class="nav-link"
+							href="${pageContext.request.contextPath}/Register.jspx">Register</a></li>
+						<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/Login.jsp" id="login">Login</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+		</div>
+	</nav>
+  
+  
+  <section class="mb-4" style="width: 70%;margin-left: 5%;margin-top: 5%;">
+    <h2 class="h1-responsive font-weight-bold my-4" style="color: #838391;">Registration</h2>
+    <div class="row">
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form name="register" action="register" method= "post">
+			
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="firstname" name="firstname" class="form-control"></input>
+                            <label for="firstname" class="">Enter your first name</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="lastname" name="lastname" class="form-control"></input>
+                            <label for="lastname" class="">Enter your last name</label>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="username" name="username" class="form-control"></input>
+                            <label for="username" class="">Enter a username</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control"></input>
+                            <label for="email" class="">Enter your Email Address</label>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="ReEmail" name="ReEmail" class="form-control"></input>
+                            <label for="ReEmail" class="">Re-enter your Email Address</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="password" id="pass" name="pass" class="form-control"></input>
+                            <label for="pass" class="">Create a password</label>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="password" id="RePass" name="RePass" class="form-control"></input>
+                            <label for="RePass" class="">Re-enter your password</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="street" name="street" class="form-control"></input>
+                            <label for="street" class="">Enter your street address</label>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="city" name="city" class="form-control"></input>
+                            <label for="city" class="">Enter your city</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="postal" name="postal" class="form-control"></input>
+                            <label for="postal" class="">Enter your Postal Code</label>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="phone" name="phone" class="form-control"></input>
+                            <label for="phone" class="">Enter your Phone number</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <select id="role" name="role" class="register" >
+                              <option value="visitor">Visitor</option>
+                              <option value="customer">Customer</option>
+                              <option value="administrator">Administrator</option>
+                              <option value="audi">Partner</option>
+                         </select>
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <button type="submit" onclick="return IsEmpty();" class="btn btn-primary" name="submit" value="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        <script language="Javascript">
+		  function IsEmpty() {
+			  if (document.forms['register'].firstname.value === "") {
+				    alert("Please enter your first name");
+				    return false;
+			  }
+			  if (document.forms['register'].lastname.value === "") {
+				    alert("Please enter your last name");
+				    return false;
+			  }
+			  if (document.forms['register'].username.value === "") {
+				    alert("Please enter a username");
+				    return false;
+			  }
+			  if (document.forms['register'].email.value === "") {
+				    alert("Please enter your email");
+				    return false;
+			  }
+			  if (document.forms['register'].email.value != document.forms['register'].ReEmail.value) {
+			    alert("Email doesnt match");
+			    return false;
+			  }
+			  if (document.forms['register'].pass.value === "") {
+				    alert("Please enter a password");
+				    return false;
+			  }
+			  if (document.forms['register'].pass.value != document.forms['register'].RePass.value) {
+				    alert("password doesnt match");
+				    return false;
+			  }
+			  if (document.forms['register'].street.value === "") {
+				    alert("Please enter your street number and your address");
+				    return false;
+			  }
+			  if (document.forms['register'].city.value === "") {
+				    alert("Please enter your city");
+				    return false;
+			  }
+			  if (document.forms['register'].postal.value === "") {
+				    alert("Please enter your postal code");
+				    return false;
+			  }
+			  if (document.forms['register'].phone.value === "") {
+				    alert("Please enter your phone number");
+				    return false;
+			  }
+
+			  return true;
+			}
+  </script>
+            <div class="status"></div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
+</jsp:root>

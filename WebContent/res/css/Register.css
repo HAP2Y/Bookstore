@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+.info {
+	margin-left: 80px;
+	padding-top: 20px;
+	font-size: 20px;
+  	font-family: "Lucida Console", Courier, monospace;
+	color: white;
+	
+}
+.registration-content {
+	height: 1000px;
+	width: 1000px;
+	margin-left: 100px;
+	margin-top: 0px;
+	background: #013;
+	border-radius: 5px;
+	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);	
+	
+}
+.register {
+	background-color: white;
+	margin-left: 100px;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);	
+	
+}
+
+.signup {
+	margin-left: 80px;
+	margin-top: 100px;
+	text-decoration:none;
+	background: #fff;
+	padding: 10px 15px;
+	color: #34495e;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 18px;
+	border-radius: 5px;
+	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+	text-decoration: none;
+	transition: 0.4s;
+	
+}
+
