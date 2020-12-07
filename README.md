@@ -17,6 +17,6 @@ And change line ("jdbc:mysql://localhost:3306/bookstore", "root", "root") to you
 
 And then run Start.java in Java resources/src/ctrl/Start.java using Tomcat server.
 
-If you have followed the stepd perfectly it should work.
+If you have followed the steps perfectly it should work.
 
 THANKS!!!
